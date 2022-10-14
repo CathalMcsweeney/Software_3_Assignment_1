@@ -159,8 +159,8 @@ public class lecturer_classTest {
     @Test
     public void testGetModulesTaught() {
         System.out.println("getModulesTaught");
-        List<String> expResult = null;
-        List<String> result = instance.getModulesTaught();
+        List<module_class> expResult = null;
+        List<module_class> result = instance.getModulesTaught();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -172,7 +172,7 @@ public class lecturer_classTest {
     @Test
     public void testSetModulesTaught() {
         System.out.println("setModulesTaught");
-        List<String> modulesTaught = null;
+        List<module_class> modulesTaught = null;
         instance.setModulesTaught(modulesTaught);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");

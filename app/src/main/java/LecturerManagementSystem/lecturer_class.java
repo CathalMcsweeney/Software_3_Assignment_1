@@ -17,7 +17,7 @@ public class lecturer_class {
     public Date dob;
     public String id;
     public String username;
-    public List<String> modulesTaught= new ArrayList<String>();
+    public List<module_class> modulesTaught= new ArrayList<>();
 
     public lecturer_class(String name, int age, Date dob, String id) {
         this.name = name;
@@ -63,12 +63,12 @@ public class lecturer_class {
         this.id = id;
     }
 
-    public List<String> getModulesTaught() {
+    public List<module_class> getModulesTaught() {
         return modulesTaught;
     }
 
-    public void setModulesTaught(List<String> modulesTaught) {
-        this.modulesTaught = modulesTaught;
+    public void setModulesTaught(module_class modulesTaughtin) {
+        this.modulesTaught.add(modulesTaughtin);
     }
     
      
