@@ -17,8 +17,8 @@ public class student_class {
     public Date dob;
     public String id;
     public String username;
-    public List<String> courses= new ArrayList<String>();
-    public List<String> modules= new ArrayList<String>();
+    public List<course_program_class> courses= new ArrayList<>();
+    public List<module_class> modules= new ArrayList<>();
 
     public student_class(String name, int age, Date dob, String id) {
         this.name = name;
@@ -60,20 +60,20 @@ public class student_class {
         this.id = id;
     }
 
-    public List<String> getCourses() {
+    public List<course_program_class> getCourses() {
         return courses;
     }
 
-    public void setCourses(List<String> courses) {
-        this.courses = courses;
+    public void setCourses(course_program_class course) {
+        this.courses.add(course);
     }
 
-    public List<String> getModules() {
+    public List<module_class> getModules() {
         return modules;
     }
 
-    public void setModules(List<String> modules) {
-        this.modules = modules;
+    public void setModules(module_class module) {
+        this.modules.add(module);
     }
     
     public String getUsername() {

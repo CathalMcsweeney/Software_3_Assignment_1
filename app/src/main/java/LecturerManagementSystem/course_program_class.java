@@ -14,8 +14,8 @@ import org.joda.time.DateTime;
  */
 public class course_program_class {
     public String cName;
-    public List<String> courseModules= new ArrayList<String>();
-    public List<String> courseStudents= new ArrayList<String>();
+    public List<module_class> courseModules= new ArrayList<>();
+    public List<student_class> courseStudents= new ArrayList<>();
     
     public DateTime startDate;
     public DateTime endDate;
@@ -34,20 +34,20 @@ public class course_program_class {
         this.cName = cName;
     }
 
-    public List<String> getCourseModules() {
+    public List<module_class> getCourseModules() {
         return courseModules;
     }
 
-    public void setCourseModules(List<String> courseModules) {
-        this.courseModules = courseModules;
+    public void setCourseModules(module_class courseModule) {
+        this.courseModules.add(courseModule);
     }
 
-    public List<String> getCourseStudents() {
+    public List<student_class> getCourseStudents() {
         return courseStudents;
     }
 
-    public void setCourseStudents(List<String> courseStudents) {
-        this.courseStudents = courseStudents;
+    public void setCourseStudents(student_class courseStudent) {
+        this.courseStudents.add(courseStudent);
     }
 
     public DateTime getStartDate() {

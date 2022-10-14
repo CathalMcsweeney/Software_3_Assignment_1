@@ -15,8 +15,8 @@ public class module_class {
     public String modName;
     public String modID;
     public lecturer_class lecturer;
-    public List<String> associatedCourses= new ArrayList<String>();
-    public List<String> students= new ArrayList<String>();
+    public List<course_program_class> associatedCourses= new ArrayList<>();
+    public List<student_class> students= new ArrayList<>();
 
     //constructor
     public module_class(String modName, String modID) {
@@ -43,17 +43,17 @@ public class module_class {
     public void setLecturer(lecturer_class lecturer) {
         this.lecturer = lecturer;
     }
-    public List<String> getAssociatedCourses() {
+    public List<course_program_class> getAssociatedCourses() {
         return associatedCourses;
     }
-    public void setAssociatedCourses(List<String> associatedCourses) {
-        this.associatedCourses = associatedCourses;
+    public void setAssociatedCourses(course_program_class associatedCourse) {
+        this.associatedCourses.add(associatedCourse);
     }
-    public List<String> getStudents() {
+    public List<student_class> getStudents() {
         return students;
     }
-    public void setStudents(List<String> students) {
-        this.students = students;
+    public void setStudents(student_class student) {
+        this.students.add(student);
     }
     
 }
