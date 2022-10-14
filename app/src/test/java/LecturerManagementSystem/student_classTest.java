@@ -150,59 +150,6 @@ public class student_classTest {
         //fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getCourses method, of class student_class.
-     */
-    @Test
-    public void testGetCourses() {
-        System.out.println("getCourses");
-        //student_class instance = null;
-        List<String> expResult = null;
-        List<String> result = instance.getCourses();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setCourses method, of class student_class.
-     */
-    @Test
-    public void testSetCourses() {
-        System.out.println("setCourses");
-        List<String> courses = null;
-        //student_class instance = null;
-        instance.setCourses(courses);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getModules method, of class student_class.
-     */
-    @Test
-    public void testGetModules() {
-        System.out.println("getModules");
-        //student_class instance = null;
-        List<String> expResult = null;
-        List<String> result = instance.getModules();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setModules method, of class student_class.
-     */
-    @Test
-    public void testSetModules() {
-        System.out.println("setModules");
-        List<String> modules = null;
-        //student_class instance = new student_class(name, age, dob, id);
-        instance.setModules(modules);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
 
     /**
      * Test of getUsername method, of class student_class.

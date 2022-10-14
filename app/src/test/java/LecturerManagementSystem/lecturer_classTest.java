@@ -4,6 +4,7 @@
  */
 package LecturerManagementSystem;
 
+import static LecturerManagementSystem.course_program_classTest.mod;
 import java.util.Date;
 import java.util.List;
 import org.junit.jupiter.api.AfterEach;
@@ -19,6 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class lecturer_classTest {
     public static lecturer_class instance;
+    public static module_class mod;
     
     public lecturer_classTest() {
     }
@@ -26,6 +28,7 @@ public class lecturer_classTest {
     @BeforeAll
     public static void setUpClass() {
         instance = new lecturer_class("frunk", 39, new Date(1980/10/10), "752");
+        mod = new module_class("testName","testID");
     }
     
     @AfterAll
@@ -154,26 +157,12 @@ public class lecturer_classTest {
     }
 
     /**
-     * Test of getModulesTaught method, of class lecturer_class.
-     */
-    @Test
-    public void testGetModulesTaught() {
-        System.out.println("getModulesTaught");
-        List<module_class> expResult = null;
-        List<module_class> result = instance.getModulesTaught();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
-
-    /**
      * Test of setModulesTaught method, of class lecturer_class.
      */
     @Test
     public void testSetModulesTaught() {
         System.out.println("setModulesTaught");
-        List<module_class> modulesTaught = null;
-        instance.setModulesTaught(modulesTaught);
+        instance.setModulesTaught(mod);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }

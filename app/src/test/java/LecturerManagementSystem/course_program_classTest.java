@@ -5,6 +5,7 @@
 package LecturerManagementSystem;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import org.joda.time.DateTime;
 import org.junit.jupiter.api.AfterEach;
@@ -20,6 +21,8 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class course_program_classTest {
     public static course_program_class instance;
+    public static module_class mod;
+    public static student_class stu;
     
     public course_program_classTest() {
     }
@@ -27,6 +30,9 @@ public class course_program_classTest {
     @BeforeAll
     public static void setUpClass() {
         instance = new  course_program_class("maths", new DateTime(2022,9,1,0,0,0,0) , new DateTime(2023,5,31,0,0,0,0));
+        mod = new module_class("testName","testID");
+        stu = new student_class("testname", 8, new Date(2000/10/10) , "id");
+        
     }
     
     @AfterAll
@@ -67,26 +73,12 @@ public class course_program_classTest {
     }
 
     /**
-     * Test of getCourseModules method, of class course_program_class.
-     */
-    @Test
-    public void testGetCourseModules() {
-        System.out.println("getCourseModules");
-        List<String> expResult = null;
-        List<String> result = instance.getCourseModules();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
-
-    /**
      * Test of setCourseModules method, of class course_program_class.
      */
     @Test
     public void testSetCourseModules() {
         System.out.println("setCourseModules");
-        List<String> courseModules = null;
-        instance.setCourseModules(courseModules);
+        instance.setCourseModules(mod);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -97,8 +89,8 @@ public class course_program_classTest {
     @Test
     public void testGetCourseStudents() {
         System.out.println("getCourseStudents");
-        List<String> expResult = new ArrayList<String>();
-        List<String> result = instance.getCourseStudents();
+        List<student_class> expResult = new ArrayList<>();
+        List<student_class> result = instance.getCourseStudents();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
     }
@@ -110,7 +102,7 @@ public class course_program_classTest {
     public void testSetCourseStudents() {
         System.out.println("setCourseStudents");
         List<String> courseStudents = null;
-        instance.setCourseStudents(courseStudents);
+        instance.setCourseStudents(stu);
         // TODO review the generated test code and remove the default call to fail.
     }
 
